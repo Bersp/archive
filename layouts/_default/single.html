@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+<div class="single-content">
+
+	{{ partial "nav.html" . }}
+	<div class="single-title">{{ .Title }}</div>
+	{{ .Content }}
+
+</div>
+
+{{ end }}

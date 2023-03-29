@@ -1,0 +1,29 @@
+{{ define "main"}}
+{{ partial "nav.html" . }}
+
+<div class="content">
+	<header class="title">
+		<h1 class="spaced-uppercase">{{ .Title }}</h1>
+	</header>
+
+	<div class="blog-body">
+		<div class="blog-title">
+			<a>{{ .Content }}</a>
+		</div>
+	</div>
+
+	<div id="list-page">
+		{{ range .Pages }}
+		<a href="{{ .RelPermalink }}">
+			<div class="subject-container">
+				<div class="subject-body">
+					<h1>{{ .Title }}</h1>
+					<p>{{ .Summary }}</p>
+				</div>
+			</div>
+		</a>
+		{{ end }}
+	</div>
+</div>
+
+{{ end }}
