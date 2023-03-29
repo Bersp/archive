@@ -1,5 +1,3 @@
 baseURL = 'http://bersp.github.io/vault/'
 languageCode = 'en-us'
 title = 'Bersp Vault'
-
-publishDir = "docs"
