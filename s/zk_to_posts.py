@@ -39,7 +39,7 @@ def create_content_file(content_folder, yaml_filename):
 
     # Change title
     old_title = re.search(r'^#\s+(.*)$', text, re.MULTILINE).group(0)
-    text = text.replace(old_title, '')
+    text = text.replace(old_title+'\n', '')
 
     if spects['transformations']['title']:
         exec(spects['transformations']['title'], globals())
@@ -66,6 +66,9 @@ def create_content_file(content_folder, yaml_filename):
     m = re.findall(r'(#+ .*)', text)
     for m in re.findall(r'(#+ .*)', text):
         text = re.sub(m, m[1:], text)
+
+    # Replace all links with just the link text
+    text = re.sub(r'\[(.*?)\]\((.*?)\)', r'\1', text)
 
     # Write new file
     with open(f'{content_folder}/{title}.md', 'w') as f:
