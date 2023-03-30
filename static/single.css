@@ -23,16 +23,12 @@
 .single-content {
 	width: min(90%, 50rem);
 	margin: auto;
-	/*padding-inline: 10rem;*/
-	/*background-color: rgba(255, 255, 255, .1);*/
-	/*box-shadow: 0 1px 10px 0 rgba(136, 150, 166, .1);*/
 }
 
 .single-content h1, h2, h3, h4, body{
 	color: var(--clr-dark);
 	font-size: var(--fs-body);
 }
-
 .single-content h1 {
 	font-size: var(--fs-h1);
 }
@@ -43,6 +39,10 @@
 	font-size: var(--fs-h3);
 	font-weight: 500;
 	/*margin-bottom: -10px;*/
+}
+
+.single-content a:-webkit-any-link {
+	color: #C95E61;
 }
 
 .single-title {
