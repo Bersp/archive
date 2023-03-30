@@ -17,9 +17,9 @@ math: true
 
 ## Enunciado
 ¿Cuándo es más probable obtener al menos un as de espadas?
-- a) al extraer dos cartas de un mismo mazo de truco (que consta de 40 cartas) (Rta: P = 0.05),
-- b) al extraerlas de dos mazos, una carta de cada mazo (Rta: P = 0.049375),
-- c) Se mezclan dos mazos y se extraen dos cartas (Rta: P = 0.049683),
+- a) al extraer dos cartas de un mismo mazo de truco (que consta de 40 cartas) (Rta: $P = 0.05$),
+- b) al extraerlas de dos mazos, una carta de cada mazo (Rta: $P = 0.049375$),
+- c) Se mezclan dos mazos y se extraen dos cartas (Rta: $P = 0.049683$),
 - d) Encuentre el espacio muestral e identifique los sucesos mencionados.
 
 ## Resolución

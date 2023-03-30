@@ -15,8 +15,6 @@ def main():
                 content_folder = os.path.join(root)
                 yaml_filename = file
 
-                # print(content_folder)
-                # print(yaml_filename)
                 create_content_file(content_folder, yaml_filename)
 
 
@@ -27,6 +25,7 @@ def create_content_file(content_folder, yaml_filename):
 
     # Search for the content file and read its text
     query = spects['zk_file']
+    print(query)
     filename = (run(query, capture_output=True, shell=True)
                 .stdout
                 .splitlines()[0]
