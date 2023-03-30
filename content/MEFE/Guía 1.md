@@ -58,8 +58,8 @@ $$
 
 ## Enunciado
 Entre los números del 1 al 100 se eligen dos al azar. Encuentre la probabilidad de que sean consecutivos si se los elige,
-- a) sin reposición (Rta: 0.02),
-- b) con reposición (Rta: 0.0198),
+- a) sin reposición (Rta: $P = 0.02$),
+- b) con reposición (Rta: $P = 0.0198$),
 - c) Encuentre el espacio muestral en cada caso e identifique los sucesos mencionados.
 
 ## Resolución
@@ -85,8 +85,8 @@ $$
 
 ## Enunciado
 Se tiran dos dados. Calcule la probabilidad de que:
-- a) no salga ningún as (Rta: 25/36),
-- b) no salga ningún as y ningún seis. (Rta: 16/36)
+- a) no salga ningún as (Rta: $P = 25/36$),
+- b) no salga ningún as y ningún seis. (Rta: $P = 16/36$)
 
 ## Resolución
 ### Punto a
@@ -102,8 +102,8 @@ $$
 # Ejercicio 11
 ## Enunciado
 Considere un partido de truco entre cuatro jugadores que dura 15 manos. Encuentre la probabilidad de que:
-- a) a un dado jugador nunca le toque el ancho de espadas (Rta: 0.31),
-- b) el as de espadas no salga en todo el partido (Rta: 0.0047).
+- a) a un dado jugador nunca le toque el ancho de espadas (Rta: $P = 0.31$),
+- b) el as de espadas no salga en todo el partido (Rta: $P = 0.0047$).
 
 ### Punto a
 $$
