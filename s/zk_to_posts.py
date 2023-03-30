@@ -68,7 +68,7 @@ def create_content_file(content_folder, yaml_filename):
         text = re.sub(m, m[1:], text)
 
     # Replace all links with just the link text
-    text = re.sub(r'\[(.*?)\]\((.*?)\)', r'\1', text)
+    text = re.sub(r'\[(.*?)\]\((?!#)(.*?)\)', r'\1', text)
 
     # Write new file
     with open(f'{content_folder}/{title}.md', 'w') as f:
