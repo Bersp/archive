@@ -9,7 +9,7 @@ script_path = os.path.dirname(os.path.abspath(__file__))
 
 
 def main():
-    for root, dirs, files in os.walk(script_path+'/content/'):
+    for root, dirs, files in os.walk(script_path+'/../content/'):
         for file in files:
             if file.endswith('.yaml'):
                 content_folder = os.path.join(root)
