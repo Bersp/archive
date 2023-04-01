@@ -59,6 +59,14 @@ def create_content_file(content_folder, yaml_filename):
     ])
     text = text[:match.start(1)] + new_metadata + text[match.end(1):]
 
+    # Since I have the limits calculated, I can also add the pre_content.
+    if 'pre_content' in spects:
+        match = re.search(r'^---\n(.*?)\n---', text, flags=re.DOTALL)
+        metadata_end_pos = match.end()
+        text = (text[:metadata_end_pos]
+                + '\n\n' + spects['pre_content']
+                + text[metadata_end_pos:])
+
     # Math in ketex is more stable using \\ inested of \
     text = re.sub(r'\\', r'\\\\', text)
 
@@ -70,10 +78,14 @@ def create_content_file(content_folder, yaml_filename):
     # Replace all links with just the link text
     text = re.sub(r'\[(.*?)\]\((?!#)(.*?)\)', r'\1', text)
 
+    # Delete footer
+    match = re.search(r'(?s)---((?!---).)*\s*$', text)
+    if match.group(0)[4] != '\n':
+        text = text[:match.start()]
+
     # Write new file
     with open(f'{content_folder}/{title}.md', 'w') as f:
         f.write(text)
-
 
 if __name__ == '__main__':
     main()

@@ -1,3 +1,9 @@
 baseURL = 'http://bersp.github.io/vault/'
 languageCode = 'en-us'
 title = 'Bersp Vault'
+
+[markup]
+  [markup.tableOfContents]
+    ordered = false
+    startLevel = 1
+    endLevel = 1
