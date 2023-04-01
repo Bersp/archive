@@ -4,13 +4,8 @@ summary: "Guía 1 de MEFE"
 math: true
 ---
 
+{{< toc title="Lista de ejercicios">}}
 
-# Ejercicios
-- [Ejercicio 7](#ejercicio-7)
-- [Ejercicio 8](#ejercicio-8)
-- [Ejercicio 9](#ejercicio-9)
-- [Ejercicio 11](#ejercicio-11)
-- [Ejercicio 12](#ejercicio-12)
 
 # Ejercicio 7
 
@@ -76,7 +71,7 @@ $$
 	\\omega = \\{ (1, 2); (100, 99) \\} \\cup \\{ (M, M+1), (M, M-1) / M:= 2, \\dots, 99 \\}\\\\ \\#\\omega = 2\\times98 + 2
 $$
 $$
-	P = \\frac{\\#\\Omega}{\\#\\omega} = 0.02
+	P = \\frac{\\#\\omega}{\\#\\Omega} = 0.02
 $$
 ### Punto b
 $$
@@ -84,7 +79,7 @@ $$
 $$
 el $\\omega$ es el mismo que en el punto anterior
 $$
-	P = \\frac{\\#\\Omega}{\\#\\omega} = 0.0198
+	P = \\frac{\\#\\omega}{\\#\\Omega} = 0.0198
 $$
 
 
@@ -130,9 +125,9 @@ Una moneda no cargada se lanza 15 veces. ¿Cuál es la probabilidad de que en la
 - $v_n$: salió cara (verso) en la tirada $n$-ésima
 - $r_n$: salió ceca (reverso) en la tirada $n$-ésima
 
-Usando la fórmula de la probabilidad condicional.
+Usando la fórmula de la probabilidad condicional $P(A|B) = P(A\\cap B)/P(B)$:
 $$
-	P(v_{15}|v_1\\cap v_2 \\dots \\cap v_{14}) = \\frac{P(v_1\\cap v_2 \\dots \\cap v_{15})}{P(v_1\\cap v_2 \\dots \\cap v_{14})} = \\frac{\\left(1/2\\right)^{15}}{\\left(1/2\\right)^{14}} = 1/2
+	P(v_{15}|v_1\\cap v_2 \\dots \\cap v_{14}) = \\frac{P(v_1\\cap v_2 \\dots \\cap v_{15})}{P(v_1\\cap v_2 \\dots \\cap v_{14})} = \\frac{\\left(1/2\\right)^{15}}{\\left(1/2\\right)^{14}} = 1/2,
 $$
 lo cual es evidente porque son independientes.
 
@@ -264,4 +259,64 @@ $$
 $$
 
 Y así con todos...
+
+# Ejercicio 17
+## Enunciado
+Sean A y B dos sucesos con P(A) = 0.4, P(A ∪ B) = 0.7 y P(B) = r. Cu´anto debe valer r para que los
+sucesos A y B sean:
+- a) mutuamente excluyentes (Rta: $r=0.3$),
+- b) independientes (Rta: $r=0.5$).
+
+## Resolución
+
+### Punto a
+Utilizando que $P(A\\cup B) = P(A) + P(B) - P(A \\cap B)$ tenemos
+$$
+	0.7 = 0.4 + r - P(A \\cap B)
+$$
+como queremos que sean mutuamente expluyentes, pedimos $P(A \\cap B) = 0$, lo que se cumple sí y solo sí 
+$$r=0.3$$
+
+### Punto b
+Ahora queremos que sean independientes, osea que $P(A\\cap B) = P(A)\\times P(B)$, esto es
+$$
+	0.7 = 0.4 + r - 0.4\\times r
+$$
+$$
+\\implies r = 0.5
+$$
+
+# Ejercicio 18
+## Enunciado
+Un análisis de sangre permite detectar una cierta enfermedad.
+El análisis detecta correctamente la presencia de la enfermedad en el $97\\%$ de los casos, pero da un falso positivo en $0.4\\%$ de los casos en pacientes sanos.
+Se sabe que el $0.5\\%$ de la población sufre esta enfermedad. ¿Cuál es la probabilidad que una persona esté realmente enferma cuando el test le da positivo? (Rta: 0.55).
+
+## Resolución
+- $E$: la persona está enferma
+- $\\bar E$: la persona está sana
+- $T$: el test dio positivo
+- $\\bar T$: el test dio negativo
+
+Del enunciado podemos sacar que
+$$
+	P(T|E) = 0.97, \\quad P(T|\\bar E) = 0.004 \\\\
+	P(E) = 0.005, \\quad P(\\bar E) = 0.995
+$$
+Usando el teorema de bayes
+$$
+	P(A|B) = \\frac{P(B|A)\\times P(A)}{P(B)}
+$$
+tenemos
+$$
+	P(E|T) = \\frac{P(T|E)\\times P(E)}{P(T)}
+$$
+nos falta $P(T)$, para calcularlo podemos usar que
+$$
+	P(T) = P(T|E)\\times P(E) + P(T|\\bar E)\\times P(\\bar E) = 0.00883
+$$
+de modo que el resultado final es
+$$
+	P(E|T) = \\frac{0.97 \\times 0.005}{0.00883} \\simeq 0.55
+$$
 
