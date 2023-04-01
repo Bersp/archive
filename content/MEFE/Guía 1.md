@@ -173,12 +173,6 @@ $$
 \\end{align*}
 $$
 
-### Punto d
-Comparando con los resultados de arriba es evidente que
-$$
-	P(\\text{punto b}) = P(\\text{punto a}) + P(\\text{punto c})
-$$
-
 # Ejercicio 14
 
 ## Enunciado
@@ -318,5 +312,93 @@ $$
 de modo que el resultado final es
 $$
 	P(E|T) = \\frac{0.97 \\times 0.005}{0.00883} \\simeq 0.55
+$$
+
+# Ejercicio 19
+## Enunciado
+Una sonda espacial pasa por las cercanías de Io, una de las lunas de Júpiter. Io es el objeto geológicamente más activo del Sistema Solar, y durante el tiempo de contacto con la sonda hay una probabilidad de $70\\%$ que dentro del campo de visión de esta se produzca una erupción volcánica.
+La sonda envía muchos datos a la Tierra, entre ellos uno que indica si observó o no observó una erupción (siempre envía alguna de las dos opciones).
+Por perturbaciones introducidas por campo magnético solar, sin embargo, hay una probabilidad
+del $10\\%$ de que la información recibida de la sonda sea incorrecta.
+Si el sistema reporta que observó una erupción, ¿Cuál es la probabilidad de que realmente lo haya hecho? (Rta: 0.9545)
+
+## Resolución
+- $E$: ocurrió una erupción
+- $R$: se reportó una erupción
+
+Los datos del ejercicio son
+$$
+	P(E) = 0.7, \\quad P(R|\\bar E) = P(\\bar R | E) = 0.1
+$$
+
+Los datos que vamos a necesitar son
+$$
+	P(R|E) = 1 - P(\\bar R|E) = 0.9
+$$
+y
+$$
+	P(R) = P(R|E)\\times P(E) + P(R|\\bar E) \\times \\underbrace{P(\\bar E)}_{1-P(E)} = 0.66
+$$
+Con todo esto podemos usar el teorema de Bayes:
+$$
+	\\begin{align*}
+		P(E|R) &= \\frac{P(R|E) \\times P(E)}{P(R)} \\\\
+					 &= \\frac{0.9 \\times 0.7}{0.66} \\simeq 0.9545
+	\\end{align*}
+$$
+
+# Ejercicio 20
+## Enunciado
+Un haz de partículas compuesto por electrones, protones y partículas $\\alpha$ (núcleos de Helio), atraviesa un detector basado en el Efecto Cerenkov, que tiene una eficiencia de $95\\%$, $50\\%$ y $30\\%$ para cada una de ellas, respectivamente. El flujo de electrones es el doble que el de protones o que el de partículas $\\alpha$.
+- a) Si se elije una partícula cualquiera del haz, ¿cu´al es la probabilidad de que sea detectada? (Rta: $P = 0.675$),
+- b) Si para una dada partícula el detector da señal, ¿cuál es la probabilidad de que se trate de un electrón? (Rta: $P = 0.704$).
+
+## Resolución
+- $e$: se emitió un electrón
+- $\\hat e$: se detectó un electrón
+- $p$: se emitió un protón
+- $\\hat p$: se detectó un protón
+- $\\alpha$: se emitió una partícula alpha
+- $\\hat \\alpha$: se detectó una partícula alpha
+
+Los datos de la eficiencia nos dice que
+$$
+	P(\\hat e|e) = 0.95, \\quad P(\\hat p|p) = 0.5,\\quad P(\\hat\\alpha|\\alpha) = 0.3
+$$
+
+El dato del flujo nos dice que la probabilidad de emitir un electrón es el doble que la probabilidad de emitir un protón o una partícula $\\alpha$. Esto es
+$$
+	P(e) = 2\\times P(p) = 2\\times P(\\alpha)
+$$
+Como siempre alguna partícula se emite, las probabilidades de emisión tienen que sumar $1$:
+$$
+	1 = P(e) + P(p) + P(\\alpha) = 2\\times P(\\alpha) + P(\\alpha) + P(\\alpha) \\\\
+	\\implies P(\\alpha) = P(p) = 1/4 \\quad\\text{y}\\quad P(e) = 1/2
+$$
+
+
+### Punto a
+$$
+	\\begin{align*}
+		P(\\hat e \\cup \\hat p \\cup \\hat \\alpha)
+		&=
+		P(\\hat e|e)P(e) +
+		P(\\hat p|p)P(p) +
+		P(\\hat \\alpha|\\alpha)P(\\alpha) \\\\
+		&= (0.95\\times 2 + 0.5 + 0.3)\\times 0.25 \\simeq 0.675
+	\\end{align*}
+$$
+
+### Punto b
+$$
+	P(e|\\hat e \\cup \\hat p \\cup \\hat \\alpha) = \\frac{P(\\hat e \\cup \\hat p \\cup \\hat \\alpha|e) \\times P(e)}{P(\\hat e \\cup \\hat p \\cup \\hat \\alpha)}
+$$
+como $P(\\hat p|e) = P(\\hat \\alpha|e) = 0$, entonces
+$$
+	P(\\hat e \\cup \\hat p \\cup \\hat \\alpha|e) = P(\\hat e|e)
+$$
+$$
+	\\implies
+	P(e|\\hat e \\cup \\hat p \\cup \\hat \\alpha) = \\frac{0.95 \\times 0.5}{0.675} \\simeq 0.704
 $$
 
