@@ -176,7 +176,7 @@ $$
 # Ejercicio 14
 
 ## Enunciado
-Un dado se fabrica de modo que la probabilidad de sacar un numéro es proporcional al mismo. Calcule:
+Un dado se fabrica de modo que la probabilidad de sacar un número es proporcional al mismo. Calcule:
 - a) la probabilidad de obtener un 2 (Rta: $P=2/21$)
 - b) la probabilidad de haber obtenido un 2 dado que se obtuvo un número par (Rta: $P=1/6$)
 
@@ -256,7 +256,7 @@ Y así con todos...
 
 # Ejercicio 17
 ## Enunciado
-Sean A y B dos sucesos con P(A) = 0.4, P(A ∪ B) = 0.7 y P(B) = r. Cu´anto debe valer r para que los
+Sean A y B dos sucesos con P(A) = 0.4, P(A ∪ B) = 0.7 y P(B) = r. Cuánto debe valer r para que los
 sucesos A y B sean:
 - a) mutuamente excluyentes (Rta: $r=0.3$),
 - b) independientes (Rta: $r=0.5$).
@@ -268,7 +268,7 @@ Utilizando que $P(A\\cup B) = P(A) + P(B) - P(A \\cap B)$ tenemos
 $$
 	0.7 = 0.4 + r - P(A \\cap B)
 $$
-como queremos que sean mutuamente expluyentes, pedimos $P(A \\cap B) = 0$, lo que se cumple sí y solo sí 
+como queremos que sean mutuamente excluyentes, pedimos $P(A \\cap B) = 0$, lo que se cumple sí y solo sí 
 $$r=0.3$$
 
 ### Punto b
@@ -284,7 +284,7 @@ $$
 ## Enunciado
 Un análisis de sangre permite detectar una cierta enfermedad.
 El análisis detecta correctamente la presencia de la enfermedad en el $97\\%$ de los casos, pero da un falso positivo en $0.4\\%$ de los casos en pacientes sanos.
-Se sabe que el $0.5\\%$ de la población sufre esta enfermedad. ¿Cuál es la probabilidad que una persona esté realmente enferma cuando el test le da positivo? (Rta: 0.55).
+Se sabe que el $0.5\\%$ de la población sufre esta enfermedad. ¿Cuál es la probabilidad que una persona esté realmente enferma cuando el test le da positivo? (Rta: $P = 0.55$).
 
 ## Resolución
 - $E$: la persona está enferma
@@ -297,7 +297,7 @@ $$
 	P(T|E) = 0.97, \\quad P(T|\\bar E) = 0.004 \\\\
 	P(E) = 0.005, \\quad P(\\bar E) = 0.995
 $$
-Usando el teorema de bayes
+Usando el teorema de Bayes
 $$
 	P(A|B) = \\frac{P(B|A)\\times P(A)}{P(B)}
 $$
@@ -320,7 +320,7 @@ Una sonda espacial pasa por las cercanías de Io, una de las lunas de Júpiter. 
 La sonda envía muchos datos a la Tierra, entre ellos uno que indica si observó o no observó una erupción (siempre envía alguna de las dos opciones).
 Por perturbaciones introducidas por campo magnético solar, sin embargo, hay una probabilidad
 del $10\\%$ de que la información recibida de la sonda sea incorrecta.
-Si el sistema reporta que observó una erupción, ¿Cuál es la probabilidad de que realmente lo haya hecho? (Rta: 0.9545)
+Si el sistema reporta que observó una erupción, ¿Cuál es la probabilidad de que realmente lo haya hecho? (Rta: $P = 0.9545$)
 
 ## Resolución
 - $E$: ocurrió una erupción
@@ -350,7 +350,7 @@ $$
 # Ejercicio 20
 ## Enunciado
 Un haz de partículas compuesto por electrones, protones y partículas $\\alpha$ (núcleos de Helio), atraviesa un detector basado en el Efecto Cerenkov, que tiene una eficiencia de $95\\%$, $50\\%$ y $30\\%$ para cada una de ellas, respectivamente. El flujo de electrones es el doble que el de protones o que el de partículas $\\alpha$.
-- a) Si se elije una partícula cualquiera del haz, ¿cu´al es la probabilidad de que sea detectada? (Rta: $P = 0.675$),
+- a) Si se elije una partícula cualquiera del haz, ¿cuál es la probabilidad de que sea detectada? (Rta: $P = 0.675$),
 - b) Si para una dada partícula el detector da señal, ¿cuál es la probabilidad de que se trate de un electrón? (Rta: $P = 0.704$).
 
 ## Resolución
@@ -401,4 +401,5 @@ $$
 	\\implies
 	P(e|\\hat e \\cup \\hat p \\cup \\hat \\alpha) = \\frac{0.95 \\times 0.5}{0.675} \\simeq 0.704
 $$
+
 
