@@ -133,3 +133,33 @@ $$
   \\implies f_Y(y) = \\frac{1}{\\pi}\\, \\frac{a}{a^2 + (y-b)^2}
 $$
 
+
+# Ejercicio 6
+## Enunciado
+Muestre que la densidad de probabilidad de $Y=X^2$ se obtiene a partir de la de $X$ como $f_Y(t) = [f_X(\\sqrt{t}) + f_X(−\\sqrt{t})]/2\\sqrt{t}$. Halle $f_Y(t)$ si
+- a) $X$ es uniforme en $[0,1]$ (Rta: $f_Y = (2\\sqrt{y})^{-1}~(0 < t < 1)$)
+- b) $X$ es normal $N(0,1)$ (esta $f_Y$ se denomina $\\chi_1^2$, chi$^2$ con un grado de libertad). (Rta: $f_Y = (1/\\sqrt{2\\pi t})\\,e^{−t/2}$)
+
+## Resolución
+$$
+  P(Y \\leq y) = P(-\\sqrt{y} \\leq X \\leq \\sqrt{y}) = F_X(\\sqrt{y}) - F_X(-\\sqrt{y})
+$$
+donde usé que los eventos dentro de la desigualdad son independientes (y que al final del día las $F$ grandes no son más que una integral).
+$$
+  f_Y(y) = {f_x(\\sqrt{y}) + f_x(-\\sqrt{y}) \\over 2 \\sqrt{y}}
+$$
+
+# Ejercicio 7
+## Enunciado
+Muestre que $Y = e^X$ (siendo $X$ una variable aleatoria con distribución uniforme) tiene distribución $f_Y(t) = 1/t,~1 \\leq t \\leq e$. Note que esto permite escribir una rutina que genere n´umeros con distribución $1/x$. ¿Cómo haría para generar números al azar con distribuci´on exponencial?
+
+## Resolución
+Si $Y = e^X$, entonces $\\log(X) = Y$ y
+$$
+  \\frac{dy}{dx} = 1/y
+$$
+$$
+  \\implies f_X(y) = f_X(x)\\, \\left|\\frac{dx}{dy}\\right| = 1/y / y \\in \\left[e^0, e^1\\right]
+$$
+
+

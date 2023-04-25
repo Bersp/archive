@@ -12,7 +12,7 @@ math: true
 ## Enunciado
 Al lanzarse un par de dados se espera que en promedio salga un doble seis cada 36 tiradas. Si se hacen sólo 25 tiradas, ¿conviene apostar a favor o en contra de la aparición de al menos un doble seis? (Rta: a favor, $P=0.5055$)
 
-# Resolución
+## Resolución
 La probabilidad de que no aparezca nunca un doble $6$ es:
 $$
   P = 1 - B(0\\,|\\,n=25, p=1/36) = 0.5055
@@ -22,7 +22,7 @@ $$
 ## Enunciado
 Para determinar si un autroproclamado adivino es un trucho se lo somete a un test que consiste en disponer boca abajo sobre la mesa diez cartas de truco, 5 oros y 5 bastos, y pedirle que adivine cuáles son los cinco bastos. Encuentre la probabilidad de que acierte tres o más bastos por pura casualidad. (Rta: $P=0.5$).
 
-# Resolución
+## Resolución
 $$
   P = \\sum_{k=3}^6 H(k|N=10,n=5,K=5) = 0.5
 $$
@@ -35,7 +35,8 @@ Se realiza una encuesta tomando $n = 500$ habitantes al azar. ¿Cuál es la prob
 - b) Si hay $N = 5000$ habitantes en la población. (Rta: $P=0.0239$)
 - c) ¿Cuántos habitantes $N$ debería haber en la población para que los resultados entre (a) y (b) tuvieran una diferencia relativa menor al 0.1%? (Rta: $N≃1.15 \\times 106$)
 
-# Resolución
+## Resolución
+
 $$
   P(A) = 0.01
 $$
@@ -52,7 +53,7 @@ $$
   \\implies P = 1-\\sum_{k=0}^9 H(k|N=5000, n=500, K=50) = 0.0239
 $$
 
-# Problema 10
+# Ejercicio 10
 ## Enunciado
 En promedio Messi mete un gol el $18.2\\%$ de las veces que patea al arco.
 - a) ¿Cuántas veces por partido debería patear para que la probabilidad de hacer al menos 2 goles sea mayor que el $0\\%$? (Rta: $20$ veces o más)
@@ -60,7 +61,8 @@ En promedio Messi mete un gol el $18.2\\%$ de las veces que patea al arco.
 - b) ¿Cuál es el número esperado de goles que haría si patea la cantidad de veces del ítem anterior? (Rta: $3.64$ goles)
 - c) Si el técnico decide que va a sacarlo justo después de hacer el segundo gol, ¿cuál es el número esperado de veces que pateó? (Rta: $11$ veces)
 
-# Resolución
+## Resolución
+
 ## Punto a
 $$
   1 - B(0, 20, 0.182) - B(1, 20, 0.182) \\simeq 0.902
@@ -72,14 +74,15 @@ $$
 ### Punto c
 La esperanza de la binomial negativa es $k/p =  2/0.182 \\simeq 11$.
 
-# Problema 11
+# Ejercicio 11
 ## Enunciado
 Una fuente radiactiva tiene una actividad de $4$ Bq (Becquerel = $1$ decaimiento $s^{-1}$).
 Calcule la probabilidad de observar al menos un decaimiento en
 - a) 1 segundo (Rta: $P=0.9817$)
 - b) 2 segundos (Rta: $P=0.9997$)
 
-# Resolución
+## Resolución
+
 $\\lambda = 4/s^{-1}$
 
 ## Punto a
@@ -94,7 +97,7 @@ $$
 	P(1, 8) \\simeq 0.9997
 $$
 
-# Problema 12
+# Ejercicio 12
 ## Enunciado
 Para determinar la concentración $c$ de glóbulos blancos en sangre de un paciente, se toma una muestra de $1$ mm$^3$ de sangre y se cuentan los glóbulos presentes.
 - a) Si se nos informa que $c = 4.05 \\text{nL}^{−1}$, ¿Cuál fue el error estadístico porcentual en la determinación de ese valor?
@@ -102,7 +105,8 @@ Para determinar la concentración $c$ de glóbulos blancos en sangre de un pacie
 - b) Resulta ser que la muestra que fue observada en el microscopio no era directamente la muestra extraída del paciente, sino que esta fue diluida $10$ veces para hacerla translúcida, y de esa nueva solución se extrajo $1$ mm$^3$ para examinar bajo el microscopio. ¿Cuál es entonces el error estadístico porcentual correcto para $c$? ¿Siguen
 siendo válidas las hipótesis del inciso previo? (Rta: $4.9\\%$)
 
-# Resolución
+## Resolución
+
 El error estadístico porcentual es $\\varepsilon = \\sigma/\\lang c\\rang$
 
 ## Punto a
@@ -127,10 +131,12 @@ $$
 	\\varepsilon = \\frac{\\sqrt{405}}{405} \\simeq 4.9\\%
 $$
 
-# Problema 14
+# Ejercicio 14
 ## Enunciado
 Una fuente de luz emite en promedio 100 fotones s$^{−1}$. Durante cuánto tiempo debería contarse fotones si se desea conocer la intensidad del haz con una precisión de $1/1000$. (Rta: 2.77 hs)
 Nota: use como "precisión" el cociente $\\varepsilon = \\sigma/\\mu$.
+
+## Resolución
 
 $$
 	\\lambda = 100/\\text{sec}
@@ -145,7 +151,7 @@ $$
 	\\implies t = 1000 \\sec \\simeq 2.77\\text{hs}
 $$
 
-# Problema 15
+# Ejercicio 15
 ## Enunciado
 Una astrónoma quiere mejorar una antigua determinación del período de un pulsar $\\tau \\pm \\sigma \\tau /\\sqrt{n}$ , hecha a partir de $n = 25$ mediciones exitosas.
 Se sabe que por fluctuaciones en la polución de la atmósfera el $20\\%$ de las pulsaciones deberán ser descartadas luego de evaluar su calidad.
@@ -155,7 +161,8 @@ Si la astrónoma quiere que la nueva determinación de $\\tau$ sea el doble de p
 - ara alcanzar el grado de precisi´on deseada? (Rta: p = 0.206)
 - c) ¿Cuántas observaciones totales debería planificar si quiere que la probabilidad de obtener la precisión deseada (o una incluso mejor) sea mayor al $99\\%$? (Rta: por lo menos $139$ mediciones)
 
-# Resolución
+## Resolución
+
 $$
 	n_e = 25 \\text{ existosas}
 $$
