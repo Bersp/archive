@@ -159,7 +159,7 @@ $$
   \\frac{dy}{dx} = 1/y
 $$
 $$
-  \\implies f_X(y) = f_X(x)\\, \\left|\\frac{dx}{dy}\\right| = 1/y / y \\in \\left[e^0, e^1\\right]
+  \\implies f_X(y) = f_X(x)\\, \\left|\\frac{dx}{dy}\\right| = 1/y \\in \\left[e^0, e^1\\right]
 $$
 
 
