@@ -1,9 +1,12 @@
-baseURL = 'http://bersp.github.io/vault/'
+baseURL = 'http://bersp.github.io/archive/'
 languageCode = 'en-us'
-title = 'Bersp Vault'
+title = 'Archive'
 
 [markup]
   [markup.tableOfContents]
     ordered = false
     startLevel = 1
     endLevel = 1
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
